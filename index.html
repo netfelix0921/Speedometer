@@ -614,41 +614,51 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  padding: 2px 0;
 }
 
 .cass-btns {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .cass-btn {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-dim);
-  font-size: 16px;
+  color: #888;
+  font-size: 20px;
   font-family: var(--font-vt);
   transition: all 0.15s;
-  padding: 2px;
+  padding: 2px 8px;
   line-height: 1;
 }
 .cass-btn.play-btn {
-  width: 30px; height: 30px;
+  width: 36px; height: 36px;
   border: 1px solid var(--secondary);
   border-radius: 50%;
   color: var(--primary);
-  font-size: 14px;
+  font-size: 16px;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 0 8px var(--glow-sm);
 }
 .cass-btn:active { transform: scale(0.85); }
 .cass-btn.play-btn:active { box-shadow: 0 0 16px var(--glow); }
 
-.cass-times {
+.music-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.music-time-val {
   font-family: var(--font-vt);
-  font-size: 14px;
-  color: var(--text-dim);
+  font-size: 15px;
+  color: #999;
   letter-spacing: 1px;
 }
 
@@ -893,9 +903,9 @@ body::after {
         </div>
 
         <!-- Times row -->
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
-          <span id="current-time" style="font-family:var(--font-vt); font-size:14px; color:var(--text-dim); letter-spacing:1px;">0:00</span>
-          <span id="total-time" style="font-family:var(--font-vt); font-size:14px; color:var(--text-dim); letter-spacing:1px;">3:42</span>
+        <div class="music-times">
+          <span id="current-time" class="music-time-val">0:00</span>
+          <span id="total-time" class="music-time-val">3:42</span>
         </div>
 
         <!-- Progress -->
